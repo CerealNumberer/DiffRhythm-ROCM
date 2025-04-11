@@ -4,8 +4,17 @@
 ```bash
 git clone https://github.com/CerealNumberer/DiffRhythm-ROCM
 cd DiffRhythm-ROCM
+
+## espeak-ng
+# For Debian-like distribution (e.g. Ubuntu, Mint, etc.)
+sudo apt-get install espeak-ng
+
 python3 -m venv venv
 source ./venv/bin/activate
+
+## install requirements
+pip install -r requirements.txt
+
 pip uninstall torch torchvision torchaudio
 ```
 <h2>Then go to:</h2>
@@ -26,11 +35,13 @@ pip install --pre --no-deps --force-reinstall pytorch-triton-rocm==3.1.0 --index
 <h2>It should now run when you use: </h2>
 
 ```bash
+#There is an issue running the infer_promp_ref.sh
 bash scripts/infer_wav_ref.sh
 ```
+
 <h1>Configuration</h1>
 
-<p>The scripts/infer_wav_ref.sh and scripts/infer_prompt_ref.sh files contain the settings for 95 or 285 second generations.</p>
+<p>The scripts/infer_wav_ref.sh and scripts/infer_prompt_ref.sh files contain the settings for 95 or 285 second generations. Stick with 285 as the 95 is having issues with attention.</p>
 <p>They also contain the reference audio file, and the text timestamps & lyrics </p>
 <p>infer.py contains the <bold>STEPS</bold> and <bold>CFG</bold></p>
 
