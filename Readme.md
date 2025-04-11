@@ -1,5 +1,4 @@
 <h1>This is an attempt to use the ROCM packages for AMD video cards and linux. I am not an expert and this is what I did to get it to work.</h1>
-<h2>If you don't have ROCM installed already:</h2>
 
 ```bash
 git clone https://github.com/CerealNumberer/DiffRhythm-ROCM
