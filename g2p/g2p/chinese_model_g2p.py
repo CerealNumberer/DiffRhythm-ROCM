@@ -121,7 +121,7 @@ class BertPolyPredict:
             os.path.join(bert_model, "poly_bert_model.onnx"),
             sess_options=options,
             providers=[
-                "CUDAExecutionProvider",
+                "ROCMExecutionProvider",
                 "CPUExecutionProvider",
             ],  # CPUExecutionProvider #CUDAExecutionProvider
         )
