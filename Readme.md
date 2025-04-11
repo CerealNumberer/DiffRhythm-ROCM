@@ -37,6 +37,7 @@ pip install --pre --no-deps --force-reinstall pytorch-triton-rocm==3.1.0 --index
 #There is an issue running the infer_promp_ref.sh
 bash scripts/infer_wav_ref.sh
 ```
+<p>The output folder is in DiffRhythm-ROCM/infer/example/output</p>
 
 <h1>Configuration</h1>
 
